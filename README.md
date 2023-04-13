@@ -25,7 +25,7 @@ Alternativa per t student
 
 Shah - Student-t Processes as Alternatives to Gaussian Processes
 
-Interessante per trasformata esscher per EMM
+Interessante per trasformata esscher per EMM e abstract
 Tong - Option pricing under threshold autoregressive models by threshold Esscher
 transform
 
@@ -33,7 +33,10 @@ Teng - ON THE HESTON MODEL WITH STOCHASTIC CORRELATION
 
 HEYDE - STUDENT PROCESSES
 
-On the Estimation of Heston-Nandi GARCH Using Returns and/or Options: A Simulation-based Approach
+Per stima modelli:
+1) 
+2) On the Estimation of Heston-Nandi GARCH Using Returns and/or Options: A Simulation-based Approach
+3) simulated annealing
 
 
 Langrock - Some nonstandard stochastic volatility models and their estimation using structured hidden Markov models
@@ -48,8 +51,8 @@ The affine arbitrage-free class of Nelson–Siegel term structure models
 
 A GARCH Option Pricing Model with Filtered Historical Simulation
 
-Filteringgggg
-Estimation and Filtration of Time-changed Lévy Processes
+Filtering
+Bates - Estimation and Filtration of Time-changed Lévy Processes
 
 Aneli - Affine multivariate GARCH models
 
@@ -60,7 +63,9 @@ R. Cont
 
 A stochastic recurrence equations approach for score driven correlation models
 
-Seminal:
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+Seminal works:
 
 Duffie - A YIELD-FACTOR MODEL OF INTEREST RATES
 
