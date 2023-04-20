@@ -83,11 +83,11 @@ Maheu McCurdy - News Arrival, Jump Dynamics, and Volatility Components for Indiv
 ------------------------------------------------------------------------------------------------------------------------------------------------
 
 Books:
-Durbin Koopman- Time Series Analysis by State Space Methods
-Papanicolaou - MULTISCALE STOCHASTIC VOLATILITY FOR EQUITY, INTEREST RATE, AND CREDIT DERIVATIVES
-White Engle - Cointegration,Causality and forecasting - memory granger
-Tsay - multivariate time series analysis
-
+1) Durbin Koopman- Time Series Analysis by State Space Methods
+2) Papanicolaou - MULTISCALE STOCHASTIC VOLATILITY FOR EQUITY, INTEREST RATE, AND CREDIT DERIVATIVES
+3) White Engle - Cointegration,Causality and forecasting - memory granger
+4) Tsay - multivariate time series analysis
+5)  Straumann - Estimation in conditionally heteroskedastic time series models
 ------------------------------------------------------------------------------------------------------------------------------------------------
 Working papers:
 Rubinstein - Exotic options
