@@ -1,8 +1,13 @@
-# timeseries
-linear models
+# Implementation in MATLAB of some GARCH models
+
+#Find MLEs by numerical maximisation of the likelihood
+
+The code is composed of several functions
+1) Creation of simulated starting points for parameter evaluation
+2) 
 
 
-Bibliography:
+References:
 ------------------------------------------------------------------------------------------------------------------------------------------------
 Articles:
 
@@ -16,30 +21,14 @@ Dynamic jump intensities and risk premiums: Evidence from S&P500 returns and opt
 Capturing Option Anomalies with a Variance-Dependent Pricing Kernel
 The Economic Value of Realized Volatility: Using High-Frequency Returns for Option Valuation
 
-Vrontos - A full-factor multivariate GARCH model
+
 
 Interessante da abstract
 Zhang Chan - Efficient Factor GARCH Models and Factor-DCC Models
 
-Alternativa per t student
 
-Shah - Student-t Processes as Alternatives to Gaussian Processes
-
-Interessante per trasformata esscher per EMM e abstract
-Tong - Option pricing under threshold autoregressive models by threshold Esscher
-transform
 
 Teng - ON THE HESTON MODEL WITH STOCHASTIC CORRELATION
-
-HEYDE - STUDENT PROCESSES
-
-Per stima modelli:
-1) 
-2) On the Estimation of Heston-Nandi GARCH Using Returns and/or Options: A Simulation-based Approach
-3) simulated annealing
-
-
-Langrock - Some nonstandard stochastic volatility models and their estimation using structured hidden Markov models
 
 An Empirical Comparison of GARCH Option Pricing Models
 
@@ -49,7 +38,6 @@ Mixed Normal Conditional Heteroskedasticity
 
 The affine arbitrage-free class of Nelson–Siegel term structure models
 
-A GARCH Option Pricing Model with Filtered Historical Simulation
 
 Filtering
 Bates - Estimation and Filtration of Time-changed Lévy Processes
@@ -57,9 +45,6 @@ Bates - Estimation and Filtration of Time-changed Lévy Processes
 Aneli - Affine multivariate GARCH models
 
 ECONOMETRIC ANALYSIS OF VOLATILITY COMPONENT MODELS
-
-Empirical properties of asset returns: stylized facts and statistical issues
-R. Cont
 
 A stochastic recurrence equations approach for score driven correlation models
 
@@ -70,11 +55,6 @@ Seminal works:
 Duffie - A YIELD-FACTOR MODEL OF INTEREST RATES
 
 Duan - Garch option pricing
-
-Bollerslev - Quasi Maximum Likelihood Estimation and Inference in Dynamic Models with
-Time Varying Covariances
-
-Straumann Mikosch - QUASI-MAXIMUM-LIKELIHOOD ESTIMATION IN CONDITIONALLY HETEROSCEDASTIC TIME SERIES: A STOCHASTIC RECURRENCE EQUATIONS APPROACH1
 
 Maheu McCurdy - News Arrival, Jump Dynamics, and Volatility Components for Individual Stock Returns 
 
@@ -89,5 +69,4 @@ Books:
 4) Tsay - multivariate time series analysis
 5)  Straumann - Estimation in conditionally heteroskedastic time series models
 ------------------------------------------------------------------------------------------------------------------------------------------------
-Working papers:
-Rubinstein - Exotic options
+
