@@ -1,7 +1,7 @@
 Code for Estimating the model of Heston-Nandi GARCH (1,1)
 
 Functions:
-- Follow main.m for calling the other functions
+- main.m: for calling the other functions
 
 
 Reference: 
