@@ -17,4 +17,4 @@ m = 1;
 T = size(data,1);
 VCV=hess^(-1)/(T-m);
 se = sqrt(diag(VCV));
-signif = ( abs( ahn ) ./ se ) >= tinv(0.95, size(data,1)-length(ahn)) ;
+signif = ( abs( a ) ./ se ) >= tinv(0.95, T-length(a)) ;
