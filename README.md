@@ -1,9 +1,10 @@
 ## GARCH models
 
-1) GARCH Heston-Nandi in [1]
-2) GARCH CJOW in [2]
-3) GARCH CJOW+
-4) GARCH F2: includes nested models
+1) Heston-Nandi in [1]
+2) Engle-Lee in [2]
+3) CJOW in [3]
+4) CJOW+
+6) F2 (with nested models)
 
 For each model the estimation routine is composed of several functions, the steps in a nutshell are:
 
