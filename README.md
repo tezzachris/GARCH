@@ -27,7 +27,10 @@ For each model the estimation routine is composed of several functions, the step
 
  ## References
 
- [1]
- [2]
+ [1]  S.L. Heston and S. Nandi. A Closed-Form GARCH Option Valuation Model. 2000
+ [2]  R.F. Engle and G. Lee. A Long-Run and Short-Run Component Model of Stock Return Volatility. 1999
+ [3]  P. Christoffersen, K. Jacobs, C. Ornthanalai, and Y. Wang. Option Valuation with Long-run and
+Short-run Volatility Components. 2008
+ [4] to be published soon
 
 
