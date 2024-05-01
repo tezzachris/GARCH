@@ -1,10 +1,17 @@
-## GARCH models
+## Affine GARCH Models (i.e. possess semi-analytical expression for characteristic function)
+
+Each model has independent folder path that carries out the model: estimation, out-sample test, simulation, option pricing (via characteristic function. 
+The models we study in the article [4] are:
 
 1) Heston-Nandi in [1]
 2) Engle-Lee in [2]
 3) CJOW in [3]
-4) CJOW+
-6) F2 (with nested models)
+4) F2 (with nested models)
+Extra) CJOW Positive model
+
+We briefly describe hereafter the content of each folder:
+
+# Model Estimation 
 
 For each model the estimation routine is composed of several functions, the steps in a nutshell are:
 
@@ -14,6 +21,13 @@ For each model the estimation routine is composed of several functions, the step
 
  Note: Ideally one should repeat the steps above multiple times to have some confidence in the results.
 
+# Model Simulation 
+
+# Option Pricing via Characteristic Function 
+
  ## References
+
+ [1]
+ [2]
 
 
