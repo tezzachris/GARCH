@@ -23,16 +23,18 @@ For each model the estimation routine is composed of several functions, the step
 
 # Model Simulation  
 
+The model simulation requires an initial value for the volatility and for the return process (optional).
+
 # Option Pricing via Characteristic function
 
 The option price of a European call/put on can be computed using the formula in [1] at Equation (11), that leverages the inversion formula of Gil-Pelaez.
 
  ## References
 
- [1]  S.L. Heston and S. Nandi. A Closed-Form GARCH Option Valuation Model. 2000 
- [2]  R.F. Engle and G. Lee. A Long-Run and Short-Run Component Model of Stock Return Volatility. 1999 
- [3]  P. Christoffersen, K. Jacobs, C. Ornthanalai, and Y. Wang. Option Valuation with Long-run and
+  [1]  S.L. Heston and S. Nandi. A Closed-Form GARCH Option Valuation Model. 2000 
+  [2]  R.F. Engle and G. Lee. A Long-Run and Short-Run Component Model of Stock Return Volatility. 1999 
+  [3]  P. Christoffersen, K. Jacobs, C. Ornthanalai, and Y. Wang. Option Valuation with Long-run and
 Short-run Volatility Components. 2008 
- [4] to be published soon 
+  [4] to be published soon 
 
 
