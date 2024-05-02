@@ -23,7 +23,9 @@ For each model the estimation routine is composed of several functions, the step
 
 # Model Simulation  
 
-# Option Pricing via Characteristic Function  
+# Option Pricing via Characteristic function
+
+The option price of a European call/put on can be computed using the formula in [1] at Equation (11), that leverages the inversion formula of Gil-Pelaez.
 
  ## References
 
