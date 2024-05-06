@@ -31,7 +31,7 @@ The option price of a European call/put on can be computed using the formula in 
 
  ## References
 
-  [1]  S.L. Heston and S. Nandi. A Closed-Form GARCH Option Valuation Model. 2000 
+  [1]  S.L. Heston and S. Nandi. A Closed-Form GARCH Option Valuation Model. 2000 \
   [2]  R.F. Engle and G. Lee. A Long-Run and Short-Run Component Model of Stock Return Volatility. 1999 
   [3]  P. Christoffersen, K. Jacobs, C. Ornthanalai, and Y. Wang. Option Valuation with Long-run and
 Short-run Volatility Components. 2008 
