@@ -31,7 +31,7 @@ The option price of a European call/put on can be computed using the formula in 
 # Data
 
 The risk free rate is freely available for download at: https://fred.stlouisfed.org/series/TB3MS \
-The S&P500 data (returns and option data) was download via Refinitiv Eikon Datastream
+The S&P500 data (returns and option data) was downloaded via Refinitiv Eikon Datastream using a University Licence
 
  ## References
 
