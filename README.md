@@ -6,8 +6,7 @@ The models we analyse in [4] are:
 1) Heston-Nandi in [1] 
 2) Engle-Lee in [2] 
 3) CJOW in [3] 
-4) F2 (with nested models) \
-Extra) CJOW Positive model 
+4) F2 (with nested models) 
 
 We briefly describe hereafter the content of each folder: 
 
@@ -28,6 +27,11 @@ The model simulation requires an initial value for the volatility and for the re
 # Option Pricing via Characteristic function
 
 The option price of a European call/put on can be computed using the formula in [1] at Equation (11), that leverages the inversion formula of Gil-Pelaez.
+
+# Data
+
+The risk free rate is freely available for download at: https://fred.stlouisfed.org/series/TB3MS
+The S&P500 data (returns and option data) was download via Refinitiv Eikon Datastream
 
  ## References
 
