@@ -3,9 +3,9 @@
 Each model has independent folder path that carries out the model: estimation, out-sample test, simulation, option pricing (via characteristic function. 
 The models we analyse in [4] are: 
 
-1) Heston-Nandi in [1] \
-2) Engle-Lee in [2] \
-3) CJOW in [3] \
+1) Heston-Nandi in [1] 
+2) Engle-Lee in [2] 
+3) CJOW in [3] 
 4) F2 (with nested models) \
 Extra) CJOW Positive model 
 
