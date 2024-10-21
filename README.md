@@ -5,8 +5,9 @@ The models we analyse in [4] are:
 
 1) Heston-Nandi in [1] 
 2) Engle-Lee in [2] 
-3) CJOW in [3] 
-4) F2 (with nested models) 
+3) CJOW in [3]
+4) GARCH-CPC in [4]
+5) GARCH2F in [5] (with nested models) 
 
 We briefly describe hereafter the content of each folder: 
 
@@ -14,11 +15,11 @@ We briefly describe hereafter the content of each folder:
 
 For each model the estimation routine is composed of several functions, the steps in a nutshell are: 
 
-1) Creation of a grid of (simulated) starting values for each parameter 
-2) Among those in the grid, select the combination that maximises the log-likelihood 
-3) Use MATLAB optmizers i.e. fmincon and fminunc to find the MLEs 
+1) Gridsearch for optimal starting param values
+2) MATLAB optmizers i.e. fmincon and fminunc to find the MLEs.
 
  Note: Ideally one should repeat the steps above multiple times to have some confidence in the results. 
+ Note2: In my experience, fminunc tends to be more accurate but requires additional care for enforcing parameter constraints 
 
 # Model Simulation  
 
