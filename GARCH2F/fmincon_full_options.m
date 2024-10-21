@@ -1,6 +1,6 @@
 
 
-%Numerical contrained optimization for the joint-likelihood of GARCH(1,1) Heston-Nandi 
+%Numerical contrained optimization for the joint-likelihood of GARCH2F 
 
 %Inputs:
 %[ret]:[double Tx1] log returns
