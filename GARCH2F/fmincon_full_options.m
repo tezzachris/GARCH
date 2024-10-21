@@ -4,7 +4,7 @@
 
 %Inputs:
 %[ret]:[double Tx1] log returns
-%[data]:[double Nx1] options dataframe
+%[data]:[double Nx1] options dataframe - check loglik_option_full_iv to see what is needed
 %[rf]:[double 1x1] risk free rate
 %[prev]:[double px1] initial paramters, p=number of paramters
 
@@ -14,7 +14,7 @@
 %[exitflag]:[double 1x1] fmincon - optimizer exit flag
 %[fo]:[double 1x1] fmincon - first order condition 
 
-function [a,log_lik,start] = fmincon_full_options(ret, data, rf, prev, err)
+function [a,log_lik,start] = fmincon_full_options(ret, data, rf, prev)
     if isempty(prev)
        prev = start_full(ret,rf);
     end
@@ -38,13 +38,8 @@ function [a,log_lik,start] = fmincon_full_options(ret, data, rf, prev, err)
     T = size(ret,1);
     N = size(data,1);
         
-    if isequal(err , 'vega')    
-        fun=@(theta) (T+N)/(2*T) * loglik_full(theta,ret,estim_flag,rf) ... 
-                   + (T+N)/(2*N) * loglik_option_full(theta,data,estim_flag,rf) ;
-    elseif isequal(err , 'iv')
-        fun=@(theta) (T+N)/(2*T) * loglik_full(theta,ret,estim_flag,rf) ... 
+    fun=@(theta) (T+N)/(2*T) * loglik_full(theta,ret,estim_flag,rf) ... 
                    + (T+N)/(2*N) * loglik_option_full_iv(theta,data,estim_flag,rf) ;
-    end
     start = prev;
     [a,fval]=fmincon(fun,prev,Aineq,bineq,Aeq,beq,lb,ub,nonlcon,options);
     log_lik = -fval;
