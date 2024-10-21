@@ -31,9 +31,9 @@ function [a,log_lik,start] = fmincon_full_options(ret, data, rf, prev)
     lb = [ 1e-50,1e-50,1e-50,-1000,1e-50,    1e-50,-1000,1e-50, 1e-50,1e-50,1e-50,1e-50,-100 ];
     %upperbound
     ub = [ 0.1,0.1,0.1,+1000,1,    0.1,+1000,1, 0.1,0.1,1,1,     +100 ];
-    %%nonlcon = @(param) nonlincon_full(param);    
-    nonlcon = [];
-    estim_flag = 0;
+    
+    nonlcon = @(param) nonlincon_full(param);    
+    estim_flag = 0; %flag for fminunc, in this case we use fmincon
     
     T = size(ret,1);
     N = size(data,1);
