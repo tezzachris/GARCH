@@ -1,9 +1,8 @@
 
 
-%df is a matrix with options inside
-%serve CF_HN
+%Option log-likelihood
 
-%IMPLIED VOLATILITY ERRORS
+%df is dataframe containing option prices, underlying , days to maturity, flag put/call, strike
 
 function [val, v, sigma2u, IVRMSE] = loglik_option_full_iv(theta,df,estim_flag,rf) %data is zeta N(0,1) vector Tx1
 
@@ -27,8 +26,8 @@ w=[0:dw:w_max, -w_max+dw:dw:-dw];
 
 CFvet = CF_HN_Full(1i*w, 999, rf, a);
 n = size(df,1);
-CTmod_vet = zeros(n,1); %prezzi opzioni modello
-IV_HNModCall = zeros(n,1); %implied volatility modello
+CTmod_vet = zeros(n,1); %option prices for model
+IV_HNModCall = zeros(n,1); %implied volatility for model
 
 for j = 1:n
 
@@ -54,7 +53,7 @@ for j = 1:n
             end
             
             IV_HNModCall(j) = blsimpv(S , K , rf * 252, Tt/252, CTmod_vet(j)...
-                                        , 'Limit',1,'Yield',0,'Class', {'Call'}); 
+                                        , 'Limit',1,'Yield',0,'Class', {'Call'}); %requires annualized params 
 
        elseif dum == 0
 
@@ -81,16 +80,8 @@ UiCall = (df.IVMarket(idx) - IV_HNModCall(idx))./df.IVMarket(idx);
 sigma2u = var(UiCall,'omitnan');
 v = - 0.5 * ( log(2*pi*sigma2u) + (UiCall).^2 ./ sigma2u );
 
-val = - sum(v,'omitnan'); % log likelihood
+val = - sum(v,'omitnan'); %negative log-likelihood
 
-IVRMSE = 100*sqrt(mean( (df.IVMarket(idx) - IV_HNModCall(idx)).^2,'omitnan' ));
+IVRMSE = 100*sqrt(mean( (df.IVMarket(idx) - IV_HNModCall(idx)).^2, 'omitnan' ));
 
 end 
-
-
-
-%Other errors
-
-%ei =  (df.PrezzoOpzione-CTmod_vet)./df.VegaMarket ;
-%VWRMSE = sqrt(mean(ei.^2,'omitnan'));
-%v = - 0.5 * ( log(2*pi*VWRMSE.^2) + (ei).^2 ./ VWRMSE.^2 );
