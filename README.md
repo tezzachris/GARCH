@@ -39,7 +39,7 @@ The S&P500 data (returns and option data) was downloaded via Refinitiv Eikon Dat
   [2]  R.F. Engle and G. Lee. A Long-Run and Short-Run Component Model of Stock Return Volatility. 1999 \
   [3]  P. Christoffersen, K. Jacobs, C. Ornthanalai, and Y. Wang. Option Valuation with Long-run and
 Short-run Volatility Components. 2008  \
-  [4] <button href="https://arxiv.org/html/2410.14513v1">Click me</button> 
-  [5] https://arxiv.org/abs/2410.14585
+  [4] GARCH-CPC: https://arxiv.org/html/2410.14513v1
+  [5] GARCH2F: https://arxiv.org/abs/2410.14585
 
 
