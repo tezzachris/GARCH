@@ -2,7 +2,7 @@
 
 # Model Estimation  
 
-The estimation routine is composed of several functions, the steps in a nutshell are: 
+The estimation is composed of several functions: 
 
 1) Gridsearch for optimal starting param values
 2) MATLAB optmizers i.e. fmincon and fminunc to find the MLEs.
