@@ -27,7 +27,7 @@ g1 = g1 + 0.5 + lam1; %is g1star
 g2 = g2 + 0.5 + lam2; %is g2star
 
 lam1 = -0.5; %is lambdastar1
-lam2 = -0.5; %is lambdastar2, change code down when you have time 
+lam2 = -0.5; %is lambdastar2
 
 omega = [w1 ; w2];
 B = [b11 + a11*g1^2 , b12+a12*g2^2;
