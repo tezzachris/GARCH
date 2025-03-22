@@ -2,6 +2,10 @@
 
 
 
+%ret is a univariate series of log-returns
+%rf is scalar - risk free rate
+%prev - is a vector of starting point parameters, can be empty
+
 function [a,log_lik,flag,fo] = fmincon_full(ret, rf, prev)
     
     if isempty(prev)
