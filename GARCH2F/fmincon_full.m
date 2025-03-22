@@ -10,9 +10,9 @@ function [a,log_lik,flag,fo] = fmincon_full(ret, rf, prev)
     
     options = optimoptions(@fmincon,'Display','none');
     %lowerbound
-    lb = [-1e-12,-1e-12,-1000,-1e-12,    -1e-12,-1000,-1e-12,    -1e-12,-1e-12, -1e-12,-1e-12,   -5];
+    lb = [-1e-12,-1e-12,-1e-12,-1000,-1e-12,    -1e-12,-1000,-1e-12,    -1e-12,-1e-12, -1e-12,-1e-12,   -5];
     %upperbound
-    ub = [0.1,0.1,+1000,1,    0.1,+1000,1,   0.1,0.1,  1,1,   +5];
+    ub = [0.1,0.1,0.1,+1000,1,    0.1,+1000,1,   0.1,0.1,  1,1,   +5];
     Aineq = []; 
     bineq = [];
     Aeq=[];
