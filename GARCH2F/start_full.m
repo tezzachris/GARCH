@@ -1,14 +1,14 @@
 function newparams = start_full(ret,rf)
     
-    L = 1000; %multipli di 10
+    L = 1000; %only multiples of 10
 
     maxgamma = 600; %can be negative also
     
-    values = [1e-6,1e-7,1e-8,1e-9,1e-10];
+    values = [1e-6,1e-7,1e-8,1e-9,1e-10]; %GARCH literatue common values for omega, alpha parameters 
 
     omega1 = rand(L,1) .* values(randi(length(values),[1,L]))'; 
     omega2 = rand(L,1) .* values(randi(length(values),[1,L]))'; 
-    beta1 =  rand(L,1) ;
+    beta1 =  rand(L,1) ; %should be in [0,1]
     alpha1 = rand(L,1) .* values(randi(length(values),[1,L]))'; 
     gamma1 = rand(L,1) .* maxgamma;
     
@@ -19,10 +19,10 @@ function newparams = start_full(ret,rf)
     alpha21 = rand(L,1) .* values(randi(length(values),[1,L]))'; 
     alpha12 = rand(L,1) .* values(randi(length(values),[1,L]))'; 
 
-    beta12  = 0.5*rand(L,1);
+    beta12  = 0.5*rand(L,1); %typically smaller that beta11, beta22
     beta21  = 0.5*rand(L,1);
     
-    lambda1 =  5*randn(L,1);
+    lambda1 =  5*randn(L,1); 
     
     a = [omega1,omega2,alpha1,gamma1,beta1,alpha2,gamma2, beta2, alpha12, alpha21, beta12, beta21, lambda1]';
 
