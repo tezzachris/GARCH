@@ -1,26 +1,39 @@
 
+%OUT OF SAMPLE ANALYSIS
+
+%primov: first value of rolling window of log returns series, start with 1
+%ultimov: last value of rolling window of log returns series, start with 1
+%ret: univariate series of log-returns
+%rf: scalar of risk-free rate
+%signif: level of significance, typically set to 0.95
+
+%Res: table results for POF and CC tests
+%QL: quantile losses
 
 function [Res,QL] = outsample_full(primov, ultimov, ret, rf, signif )
 
-    nsim = 100000;
+    nsim = 100000; %number of simulations
    
     subret = ret(primov:ultimov,1);
     n = ultimov - primov + 1;
-    ninsample = ceil(0.6 * n);   
+    ninsample = ceil(0.6 * n);   %window size
     j = 0;
     prevparam = [];
-    VARs1 = zeros(n-ninsample,1);  %storing the value at risk
+    VARs1 = zeros(n-ninsample,1);  %storing the value at risk values
     VARs2=VARs1; VARs3=VARs1; VARs4=VARs1; VARs5=VARs1; 
     
     for i = ninsample : 1 : n-1
         j = j + 1 ; 
+    
         insample = subret(j:i,1);
+    
         [param] = fmincon_full(insample,rf,prevparam);
 
         prevparam = param;
         R0 = insample(end); 
-        simuls = simulate_full(5,param,rf,nsim,R0); %usavo 2 prima meglio 1?
+        simuls = simulate_full(5,param,rf,nsim,R0); %simulate 5-days ahead
 
+        %Value at risk simulated, from 1 up to 5 days ahead
         VARs1(j) = quantile( simuls(1,:), 1-signif);
         VARs2(j) = quantile( simuls(2,:), 1-signif);
         VARs3(j) = quantile( simuls(3,:), 1-signif);
@@ -33,6 +46,7 @@ function [Res,QL] = outsample_full(primov, ultimov, ret, rf, signif )
 yt = subret(ninsample+1:n);
 
    %VaR Back Test
+   
 vbt1=varbacktest(  yt , -VARs1, 'VaRLevel',signif); %Note: -VaR and 0.95 signif to test the 0.05 quantile
 vbt2=varbacktest(  yt , -VARs2, 'VaRLevel',signif);
 vbt3=varbacktest(  yt , -VARs3, 'VaRLevel',signif);
