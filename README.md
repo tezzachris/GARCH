@@ -87,7 +87,7 @@ Specifically, option prices are obtained via the inversion formula of **Gil-Pela
 
 If you use this code, please cite:
    ```matlab
-      Ballestra, L. V., D’Innocenzo, E., & Tezza, C.  
+      Ballestra, L. V., D’Innocenzo, E., Tezza, C.  
       "A GARCH Model with Two Volatility Components and Two Driving Factors"
-      Journal of Empirical Finance**,  
+      Journal of Empirical Finance  
       Volume 85, February 2026, Article 101671
