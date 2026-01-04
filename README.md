@@ -72,14 +72,6 @@ Specifically, option prices are obtained via the inversion formula of **Gil-Pela
 - **Equity and option data**:  
   S&P 500 returns and option data were obtained via **Refinitiv Eikon Datastream** under a University license.
 
----
-
-## File Structure
-
-- `start_param.m % Randomized starting values`
-- `loglik.m % Kalman filter log-likelihood`
-- `RungeKuttaFuture.m % Runge–Kutta solver for affine coefficients used in log-future price formula`
-- `main.m % Main estimation routine`
 
 ---
 
