@@ -76,9 +76,18 @@ Specifically, option prices are obtained via the inversion formula of **Gil-Pela
 
 ## File Structure
 
-## References
+- `start_param.m % Randomized starting values`
+- `loglik.m % Kalman filter log-likelihood`
+- `RungeKuttaFuture.m % Runge–Kutta solver for affine coefficients used in log-future price formula`
+- `main.m % Main estimation routine`
 
-[1] Ballestra, L. V., D’Innocenzo, E., & Tezza, C.  
-*A GARCH Model with Two Volatility Components and Two Driving Factors*  
-**Journal of Empirical Finance**,  
-Volume 85, February 2026, Article 101671
+---
+
+## Reference
+
+If you use this code, please cite:
+   ```matlab
+      Ballestra, L. V., D’Innocenzo, E., & Tezza, C.  
+      "A GARCH Model with Two Volatility Components and Two Driving Factors"
+      Journal of Empirical Finance**,  
+      Volume 85, February 2026, Article 101671
